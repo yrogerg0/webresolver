@@ -1,9 +1,10 @@
 import socket, time, os, random
 
 szinVege = '\x1b[0m'
+os.system("cls")
 def main():
-    os.system("cls")
-    print('\x1b[0;30;47m'+"copyright: yrogerg#1834"+szinVege)
+    elsosor = '\x1b[0;30;47m'+"copyright: yrogerg#1834"+szinVege
+    print(elsosor)
     print("Adj meg egy weboldal címet, http(s) nélkül!\nLásd például: \"google.com\" vagy \"www.google.com\"\n")
     hostname = input("Weboldal címe: "+'\033[95m')
     try:
@@ -49,7 +50,7 @@ def main():
                         i -= 1
                     if i == 0:
                         os.system("cls")
-                if con == "":
+                if con not in list:
                     continyu2()
             continyu2()
     continyu()
